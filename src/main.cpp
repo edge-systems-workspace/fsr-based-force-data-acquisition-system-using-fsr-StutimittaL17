@@ -21,3 +21,17 @@ int fsrValue = 0;     ///< Stores analog value read from FSR
  * This function runs once when the Arduino starts.
  * It sets up Serial communication at 9600 baud rate.
  */
+
+void setup() {
+  Serial.begin(9600);
+}
+
+
+/**
+ * @brief Continuously reads force value from FSR.
+ *
+ * Steps:
+ * 1. Reads analog value (0–1023) from FSR
+ * 2. Prints force value on Serial Monitor
+ * 3. Waits 500 milliseconds before next reading
+ */
